@@ -1,0 +1,69 @@
+<template>
+<view class="copyright">
+  <image class="copyright-img" wx:if="{{logo}}" src="{{logo}}"
+    style="{{calcLogo}}"></image>
+  <text class="copyright-text" style="{{calcText}}">{{text}}</text>
+</view>
+</template>
+
+<script>
+import wepy from 'wepy'
+
+export default class Copyright extends wepy.component {
+  props = {
+    text: {
+      type: String,
+      default: '由奇点云提供技术支持',
+    },
+    textStyle: {
+      type: Object,
+      default: {},
+    },
+    logo: {
+      type: String,
+      default: 'https://static.excaliburhan.com/xpmnui/copyright-logo.png',
+    },
+    logoStyle: {
+      type: Object,
+      default: {},
+    },
+  }
+  computed = {
+    calcText () {
+      return this.calcStyle(this.textStyle)
+    },
+    calcLogo () {
+      return this.calcStyle(this.logoStyle)
+    },
+  }
+
+  calcStyle (style) {
+    let ret = ''
+    for (let key in style) {
+      ret += `${key}:${style[key]};`
+    }
+    return ret
+  }
+}
+</script>
+
+<style>
+.copyright {
+  position: fixed;
+  bottom: 20rpx;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.copyright-img {
+  margin-right: 6rpx;
+  width: 26rpx;
+  height: 20rpx;
+}
+.copyright-text {
+  font-size: 22rpx;
+  color: #ccc;
+}
+</style>
