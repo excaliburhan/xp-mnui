@@ -1,0 +1,8 @@
+{
+  "name": "xp-mnui-iconfont",
+  "version": "1.0.0",
+  "description": "Iconfont 图标",
+  "main": "index.wpy",
+  "author": "xiaoping",
+  "license": "MIT"
+}

@@ -1,0 +1,50 @@
+<template>
+<view class="iconfont icon-{{type}}" style="{{combineStyle}}"></view>
+</template>
+
+
+<script>
+import wepy from 'wepy'
+
+export default class Iconfont extends wepy.component {
+  props = {
+    type: {
+      type: String,
+      default: 'duanxin',
+    },
+    size: {
+      type: [String, Number],
+      default: '44',
+    },
+    color: {
+      type: String,
+      default: '#666',
+    },
+  }
+  computed = {
+    combineStyle () {
+      console.log(this.size, this.color)
+      return this.calcStyle({
+        'font-size': this.size + 'rpx',
+        color: this.color,
+      })
+    },
+  }
+
+  calcStyle (style) {
+    let ret = ''
+    for (let key in style) {
+      ret += `${key}:${style[key]};`
+    }
+    return ret
+  }
+}
+</script>
+
+<style>
+@import './iconfont.wxss';
+.iconfont {
+  display: inline-block;
+  vertical-align: middle;
+}
+</style>
