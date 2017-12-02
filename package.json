@@ -7,10 +7,12 @@
   "author": "xiaoping <edwardhjp@gmail.com>",
   "license": "MIT",
   "bin": {
-    "mnui": "bin/mnui.js"
+    "mnui": "bin/mnui.js",
+    "mnui-ls": "bin/mnui-ls.js"
   },
   "dependencies": {
     "chalk": "^2.3.0",
-    "commander": "^2.11.0"
+    "commander": "^2.11.0",
+    "glob": "^7.1.2"
   }
 }
