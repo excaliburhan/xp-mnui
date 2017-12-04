@@ -1,8 +1,8 @@
 <template>
-<view class="copyright">
-  <image class="copyright-img" wx:if="{{logo}}" src="{{logo}}"
+<view class="mnui-copyright">
+  <image class="mnui-copyright__img" wx:if="{{logo}}" src="{{logo}}"
     style="{{calcLogo}}"></image>
-  <text class="copyright-text" style="{{calcText}}">{{text}}</text>
+  <text class="mnui-copyright__text" style="{{calcText}}">{{text}}</text>
 </view>
 </template>
 
@@ -48,7 +48,7 @@ export default class Copyright extends wepy.component {
 </script>
 
 <style>
-.copyright {
+.mnui-copyright {
   position: fixed;
   bottom: 20rpx;
   left: 0;
@@ -57,12 +57,12 @@ export default class Copyright extends wepy.component {
   align-items: center;
   justify-content: center;
 }
-.copyright-img {
+.mnui-copyright__img {
   margin-right: 6rpx;
   width: 26rpx;
   height: 20rpx;
 }
-.copyright-text {
+.mnui-copyright__text {
   font-size: 22rpx;
   color: #ccc;
 }

@@ -1,5 +1,5 @@
 <template>
-<view class="iconfont icon-{{type}}" style="{{combineStyle}}"></view>
+<view class="mnui-iconfont iconfont icon-{{type}}" style="{{combineStyle}}"></view>
 </template>
 
 
