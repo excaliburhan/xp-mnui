@@ -1,0 +1,8 @@
+{
+  "name": "xp-mnui-msg",
+  "version": "1.0.0",
+  "description": "Msg 提示页",
+  "main": "index.wpy",
+  "author": "xiaoping",
+  "license": "MIT"
+}

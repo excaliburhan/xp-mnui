@@ -37,18 +37,18 @@ export default class Index extends wepy.page {
 
 ## props参数
 
-### text
+### text[String]
 
 文字，默认：由奇点云提供技术支持
 
-### textStyle
+### textStyle[Object]
 
 文字样式
 
-### logoUrl
+### logo[String]
 
 logo地址，默认：https://static.excaliburhan.com/xpmnui/copyright-logo.png
 
-### logoStyle
+### logoStyle[Object]
 
 logo样式

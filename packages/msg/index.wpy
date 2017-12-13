@@ -1,0 +1,81 @@
+<template>
+<view class="mnui-msg">
+  <icon class="mnui-msg-icon" type="{{iconObj.type}}" size="{{iconObj.size}}" color="{{iconObj.color}}"></icon>
+  <view class="mnui-msg-text"><text>{{text}}</text></view>
+  <view wx:if="{{btnObj.show}}" class="mnui-msg-btn">
+    <button size="small" @tap="onBtnTap" style="{{btnObj.style}}">{{btnObj.text}}</button>
+  </view>
+</view>
+</template>
+
+<script>
+import wepy from 'wepy'
+
+export default class Msg extends wepy.component {
+  data = {
+    iconObj: {
+      type: 'success',
+      size: '100',
+      color: '',
+    },
+    text: '',
+    btnObj: {
+      show: true,
+      text: '完成',
+      style: '',
+      callback: null,
+    },
+  }
+  methods = {
+    onBtnTap () {
+      if (this.btnObj && this.btnObj.callback) {
+        this.btnObj.callback(this.data)
+      }
+    }
+  }
+
+  onShow (data = {}) {
+    // 传递invoke的的参数
+    for (let k in data) {
+      if (k === 'iconObj' || k === 'btnObj') {
+        this[k] = Object.assign(this[k], data[k])
+      } else {
+        this[k] = data[k]
+      }
+    }
+    this.$apply()
+  }
+}
+</script>
+
+<style lang="less">
+.mnui-msg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background: #fff;
+  &-icon {
+    margin-top: 200rpx;
+  }
+  &-text {
+    margin-top: 90rpx;
+    padding: 0 40rpx;
+    font-size: 36rpx;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+  }
+  &-btn {
+    margin-top: 300rpx;
+    text-align: center;
+    button {
+      width: 300rpx;
+      color: #1aad19;
+      background: transparent;
+      border: 2rpx solid #1aad19;
+    }
+  }
+}
+</style>
+
