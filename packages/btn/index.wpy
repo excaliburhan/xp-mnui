@@ -62,27 +62,28 @@ export default class Btn extends wepy.component {
 .mnui-btn::after {
   border: none;
 }
-.mnui-btn[type="default"] {
+.mnui-btn {
+  width: calc(100% - 80rpx);
   margin: 0 40rpx;
   font-size: 36rpx;
   border-radius: 6px;
+}
+.mnui-btn[type="default"] {
   color: #fff;
   background: #19CADA;
 }
 .mnui-btn[type="plain"] {
-  margin: 0 40rpx;
-  font-size: 36rpx;
-  border-radius: 6rpx;
   color: #19CADA;
   background: transparent;
   border: 2rpx solid #19CADA;
 }
 .mnui-btn[size="small"] {
-  margin: 0 auto;
   width: 300rpx;
+  margin: 0 auto;
 }
 .mnui-btn[size="mini"] {
   display: inline-block;
+  width: auto;
   margin: 0;
   padding: 0 1em;
   line-height: 2.3;
