@@ -1,5 +1,5 @@
 <template>
-<button class="mnui-btn" type="{{type}}" size="{{size}}" loading="{{loading}}" plain
+<button class="mnui-btn" type="{{type}}" size="{{size}}" loading="{{loading}}"
   disabled="{{disabled}}" hover-class="{{hoverClass}}" style="{{combineStyle}}" @tap="onTap">
   <slot></slot>
 </button>
