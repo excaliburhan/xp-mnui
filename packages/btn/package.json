@@ -1,0 +1,8 @@
+{
+  "name": "xp-mnui-btn",
+  "version": "1.0.1",
+  "description": "Btn 按钮",
+  "main": "index.wpy",
+  "author": "xiaoping",
+  "license": "MIT"
+}

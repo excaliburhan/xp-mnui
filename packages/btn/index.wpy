@@ -1,0 +1,101 @@
+<template>
+<button class="mnui-btn" type="{{type}}" size="{{size}}" loading="{{loading}}" plain
+  disabled="{{disabled}}" hover-class="{{hoverClass}}" style="{{combineStyle}}" @tap="onTap">
+  <slot></slot>
+</button>
+</template>
+
+
+<script>
+import wepy from 'wepy'
+
+export default class Btn extends wepy.component {
+  props = {
+    type: {
+      type: String,
+      default: 'default',
+    },
+    size: {
+      type: String,
+      default: 'default',
+    },
+    loading: {
+      type: Boolean,
+      default: false,
+    },
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
+    hoverClass: {
+      type: String,
+      default: 'none',
+    },
+    style: {
+      type: Object,
+      default: {},
+    },
+  }
+  computed = {
+    combineStyle () {
+      return this.calcStyle(this.style)
+    },
+  }
+
+  methods = {
+    onTap (e) {
+      this.$emit('tap', e)
+    },
+  }
+
+  calcStyle (style) {
+    let ret = ''
+    for (let key in style) {
+      ret += `${key}:${style[key]};`
+    }
+    return ret
+  }
+}
+</script>
+
+<style>
+.mnui-btn::after {
+  border: none;
+}
+.mnui-btn[type="default"] {
+  margin: 0 40rpx;
+  font-size: 36rpx;
+  border-radius: 6px;
+  color: #fff;
+  background: #19CADA;
+}
+.mnui-btn[type="plain"] {
+  margin: 0 40rpx;
+  font-size: 36rpx;
+  border-radius: 6rpx;
+  color: #19CADA;
+  background: transparent;
+  border: 2rpx solid #19CADA;
+}
+.mnui-btn[size="small"] {
+  margin: 0 auto;
+  width: 300rpx;
+}
+.mnui-btn[size="mini"] {
+  display: inline-block;
+  margin: 0;
+  padding: 0 1em;
+  line-height: 2.3;
+  font-size: 26rpx;
+}
+.mnui-btn[disabled] {
+  color: rgba(0, 0, 0, 0.3) !important;
+  background-color: #F7F7F7 !important;
+}
+.mnui-btn[type="plain"][disabled] {
+  color: rgba(0, 0, 0, 0.2) !important;
+  border-color: rgba(0, 0, 0, 0.2) !important;
+  border:2 rpx solid #ccc !important;
+  background-color: transparent !important;
+}
+</style>
