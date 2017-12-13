@@ -15,7 +15,7 @@
 ```js
 // index.wpy
 <template>
-  <btn props="{{props}}"></btn>
+  <msg props="{{props}}"></msg>
 </template>
 
 <script>
