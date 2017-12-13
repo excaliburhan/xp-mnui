@@ -1,5 +1,5 @@
 <template>
-<view class="mnui-iconfont iconfont icon-{{type}}" style="{{combineStyle}}"></view>
+<view class="mnui-iconfont iconfont icon-{{icon}}" style="{{combineStyle}}"></view>
 </template>
 
 
@@ -8,7 +8,7 @@ import wepy from 'wepy'
 
 export default class Iconfont extends wepy.component {
   props = {
-    type: {
+    icon: {
       type: String,
       default: '',
     },
