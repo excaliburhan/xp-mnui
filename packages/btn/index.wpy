@@ -88,11 +88,15 @@ export default class Btn extends wepy.component {
   line-height: 2.3;
   font-size: 26rpx;
 }
+.mnui-btn[loading][type="default"] {
+  color: #fff;
+  background-color: #19CADA;
+}
 .mnui-btn[disabled] {
   color: rgba(0, 0, 0, 0.3) !important;
   background-color: #F7F7F7 !important;
 }
-.mnui-btn[type="plain"][disabled] {
+.mnui-btn[disabled][type="plain"] {
   color: rgba(0, 0, 0, 0.2) !important;
   border-color: rgba(0, 0, 0, 0.2) !important;
   border:2 rpx solid #ccc !important;
