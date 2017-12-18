@@ -1,5 +1,5 @@
 <template>
-<view wx:if="{{reveal}}" class="mnui-toptips" animation="{{animationData}}">
+<view wx:if="{{reveal}}" class="mnui-toptips" animation="{{animationData}}" style="{{textStyle}}">
   <view class="mnui-toptips__text">{{options.text || ''}}</view>
 </view>
 </template>
@@ -14,7 +14,25 @@ export default class Toptips extends wepy.component {
     reveal: false,
     options: {},
   }
+  props = {
+    style: {
+      type: Object,
+      default: {},
+    },
+  }
+  computed = {
+    textStyle () {
+      return this.calcStyle(this.style)
+    },
+  }
 
+  calcStyle (style) {
+    let ret = ''
+    for (let key in style) {
+      ret += `${key}:${style[key]};`
+    }
+    return ret
+  }
   show (options = {}) {
     // 如果传递参数为字符串，将其转为object
     if (typeof options === 'string') {
@@ -103,7 +121,8 @@ export default class Toptips extends wepy.component {
   height: 60rpx;
   line-height: 60rpx;
   padding: 0 20rpx;
-  background: #FF5167;
+  color: #fff;
+  background-color: rgba(0, 0, 0, .7);
 }
 .mnui-toptips__text {
   overflow: hidden;
@@ -111,6 +130,5 @@ export default class Toptips extends wepy.component {
   white-space: nowrap;
   font-size: 30rpx;
   text-align: center;
-  color: #fff;
 }
 </style>

@@ -15,7 +15,7 @@
 ```js
 // index.wpy
 <template>
-  <toptips></toptips>
+  <toptips {{props}}></toptips>
 </template>
 
 <script>
@@ -46,10 +46,15 @@ this.$invoke('toptips', 'show', { // 参数
 
 ## 参数
 
-### text
+### text[String]
 
 显示的文字
 
-### duration
+### duration[Number]
 
 持续时间，默认1500毫秒
+
+### style[Object]
+
+样式，通过写在标签中的props生效
+
