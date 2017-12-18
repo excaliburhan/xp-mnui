@@ -34,24 +34,24 @@ export default class Index extends wepy.page {
 
 ### type[String]
 
-【选填】按钮样式，默认为default，可选plain
+按钮样式，默认为default，可选plain
 
 ### size[String]
 
-【选填】按钮大小，可选small，mini
+按钮大小，可选small，mini
 
 ### loading[Boolean]
 
-【选填】是否显示loading
+是否显示loading
 
 ### disabled[Boolean]
 
-【选填】是否disabled
+是否disabled
 
 ### hoverClass[String]
 
-【选填】点击态样式classname，默认为none
+点击态样式classname，默认为none
 
 ### style[Object]
 
-【选填】自定义样式，对象格式
+自定义样式，对象格式

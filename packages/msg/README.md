@@ -36,12 +36,12 @@ export default class Index extends wepy.page {
 
 ### iconObj[Object]
 
-【选填】icon样式，默认为{ type: 'success', size: '100', color: '' }
+icon样式，默认为{ type: 'success', size: '100', color: '' }
 
 ### text[Stirng]
 
-【选填】说明文字
+说明文字
 
 ### btnObj[Object]
 
-【选填】按钮样式，默认为{ show: true, text: '完成', style: '', callback: null }
+按钮样式，默认为{ show: true, text: '完成', style: '', callback: null }

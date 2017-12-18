@@ -21,7 +21,7 @@ export default class Copyright extends wepy.component {
     },
     logo: {
       type: String,
-      default: 'https://static.excaliburhan.com/xpmnui/copyright-logo.png',
+      default: 'http://startdtadmin.oss-cn-hangzhou.aliyuncs.com/startgo/mnui/copyright-logo.png',
     },
     logoStyle: {
       type: Object,

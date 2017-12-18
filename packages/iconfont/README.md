@@ -34,12 +34,12 @@ export default class Index extends wepy.page {
 
 ### type[String]
 
-【必填】icon类型，支持的参数见http://www.iconfont.cn/manage/index?spm=a313x.7781069.1998910419.10&manage_type=myprojects&projectId=375015
+icon类型，支持的参数见http://www.iconfont.cn/manage/index?spm=a313x.7781069.1998910419.10&manage_type=myprojects&projectId=375015
 
 ### size[String, Number]
 
-【选填】icon大小，单位为小程序的rpx，默认为44，实际大小为22px
+icon大小，单位为小程序的rpx，默认为44，实际大小为22px
 
 ### color[String]
 
-【选填】icon颜色，默认为#666
+icon颜色，默认为#666
