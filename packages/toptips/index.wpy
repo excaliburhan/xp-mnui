@@ -15,14 +15,21 @@ export default class Toptips extends wepy.component {
     options: {},
   }
   props = {
-    style: {
-      type: Object,
-      default: {},
+    color: {
+      type: String,
+      default: '#fff',
+    },
+    backgroundColor: {
+      type: String,
+      default: 'rgba(0,0,0,0.7)',
     },
   }
   computed = {
     textStyle () {
-      return this.calcStyle(this.style)
+      return this.calcStyle({
+        color: this.color,
+        'background-color': this.backgroundColor,
+      })
     },
   }
 
