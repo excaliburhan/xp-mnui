@@ -1,6 +1,8 @@
 <template>
-<button class="mnui-btn" type="{{type}}" size="{{size}}" loading="{{loading}}"
-  disabled="{{disabled}}" hover-class="{{hoverClass}}" style="{{combineStyle}}" @tap="onTap">
+<button class="mnui-btn mnui-btn-{{type}}" :class="{'mnui-btn-disabled': disabled}" type="{{type}}"
+  size="{{size}}" loading="{{loading}}" disabled="{{disabled}}" hover-class="{{hoverClass}}"
+  style="{{combineStyle}}" @tap="onTap"
+>
   <slot></slot>
 </button>
 </template>
@@ -67,21 +69,22 @@ export default class Btn extends wepy.component {
   margin: 0 40rpx;
   font-size: 36rpx;
   border-radius: 6px;
+  border: none;
 }
-.mnui-btn[type="default"] {
+.mnui-btn-default {
   color: #fff;
   background: #19CADA;
 }
-.mnui-btn[type="plain"] {
+.mnui-btn-plain {
   color: #19CADA;
   background: transparent;
   border: 2rpx solid #19CADA;
 }
-.mnui-btn[size="small"] {
+.mnui-btn-small {
   width: 300rpx;
   margin: 0 auto;
 }
-.mnui-btn[size="mini"] {
+.mnui-btn-mni {
   display: inline-block;
   width: auto;
   margin: 0;
@@ -89,18 +92,14 @@ export default class Btn extends wepy.component {
   line-height: 2.3;
   font-size: 26rpx;
 }
-.mnui-btn[loading][type="default"] {
-  color: #fff;
-  background-color: #19CADA;
-}
-.mnui-btn[disabled] {
+.mnui-btn-disabled {
   color: rgba(0, 0, 0, 0.3) !important;
   background-color: #F7F7F7 !important;
 }
-.mnui-btn[disabled][type="plain"] {
+.mnui-btn-disabled.mnui-btn-plain {
   color: rgba(0, 0, 0, 0.2) !important;
   border-color: rgba(0, 0, 0, 0.2) !important;
-  border:2 rpx solid #ccc !important;
+  border: 2rpx solid #ccc !important;
   background-color: transparent !important;
 }
 </style>

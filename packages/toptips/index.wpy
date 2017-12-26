@@ -58,7 +58,7 @@ export default class Toptips extends wepy.component {
     // 清除toast的timer
     clearTimeout(this.timer)
     setTimeout(() => { // 创建animateData
-      let animation = wx.createAnimation({
+      let animation = wepy.createAnimation({
         duration: 150,
         timingFunction: 'ease-in-out',
       })
@@ -103,7 +103,7 @@ export default class Toptips extends wepy.component {
   hide () {
     clearTimeout(this.timer)
     this.reveal = false
-    let animation = wx.createAnimation({
+    let animation = wepy.createAnimation({
       duration: 150,
       timingFunction: 'ease-in-out',
     })
