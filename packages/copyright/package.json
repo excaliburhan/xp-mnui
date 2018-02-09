@@ -1,6 +1,6 @@
 {
   "name": "@mnui/copyright",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Copyright 版权信息",
   "main": "index.wpy",
   "repository": "git@github.com:excaliburhan/xp-mnui.git",
