@@ -1,6 +1,6 @@
 {
-  "name": "xp-mnui-toast",
-  "version": "1.0.2",
+  "name": "@mnui/toast",
+  "version": "1.0.0",
   "description": "Toast 轻提示",
   "main": "index.wpy",
   "author": "xiaoping",

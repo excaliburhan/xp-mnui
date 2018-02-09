@@ -1,6 +1,6 @@
 {
-  "name": "xp-mnui-copyright",
-  "version": "1.0.2",
+  "name": "@mnui/copyright",
+  "version": "1.0.0",
   "description": "Copyright 版权信息",
   "main": "index.wpy",
   "author": "xiaoping",
