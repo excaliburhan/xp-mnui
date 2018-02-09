@@ -1,6 +1,6 @@
 {
   "name": "@mnui/msg",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Msg 提示页",
   "main": "index.wpy",
   "author": "xiaoping",
