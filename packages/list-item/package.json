@@ -1,8 +1,11 @@
 {
   "name": "@mnui/list-item",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "List 列表",
   "main": "index.wpy",
-  "author": "xiaoping",
-  "license": "MIT"
+  "author": "xiaoping <edwardhjp@gmail.com>",
+  "repository": "git@github.com:excaliburhan/xp-mnui.git",
+  "publishConfig": {
+    "access": "public"
+  }
 }
