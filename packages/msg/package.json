@@ -1,6 +1,6 @@
 {
   "name": "@mnui/msg",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Msg 提示页",
   "main": "index.wpy",
   "repository": "git@github.com:excaliburhan/xp-mnui.git",

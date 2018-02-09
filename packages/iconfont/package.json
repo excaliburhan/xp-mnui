@@ -1,6 +1,6 @@
 {
   "name": "@mnui/iconfont",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Iconfont 图标",
   "main": "index.wpy",
   "repository": "git@github.com:excaliburhan/xp-mnui.git",

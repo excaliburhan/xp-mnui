@@ -1,6 +1,6 @@
 {
   "name": "@mnui/list-item",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "List 列表",
   "main": "index.wpy",
   "author": "xiaoping <edwardhjp@gmail.com>",
