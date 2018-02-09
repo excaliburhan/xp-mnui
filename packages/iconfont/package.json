@@ -1,6 +1,6 @@
 {
-  "name": "@xpmn/iconfont",
-  "version": "1.0.2",
+  "name": "@mnui/iconfont",
+  "version": "1.0.3",
   "description": "Iconfont 图标",
   "main": "index.wpy",
   "author": "xiaoping",

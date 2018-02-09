@@ -1,6 +1,6 @@
 {
-  "name": "@xpmn/list-item",
-  "version": "0.0.3",
+  "name": "@mnui/list-item",
+  "version": "0.0.4",
   "description": "List 列表",
   "main": "index.wpy",
   "author": "xiaoping",
