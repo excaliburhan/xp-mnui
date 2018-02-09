@@ -1,6 +1,6 @@
 {
   "name": "@mnui/btn",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Btn 按钮",
   "main": "index.wpy",
   "repository": "git@github.com:excaliburhan/xp-mnui.git",
