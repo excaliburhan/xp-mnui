@@ -1,6 +1,6 @@
 {
-  "name": "@mnui/btn",
-  "version": "1.0.1",
+  "name": "@xpmn/btn",
+  "version": "1.0.2",
   "description": "Btn 按钮",
   "main": "index.wpy",
   "author": "xiaoping",

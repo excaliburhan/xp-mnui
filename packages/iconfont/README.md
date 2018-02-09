@@ -8,7 +8,7 @@
 
 ### 安装组件
 
-> npm install @mnui/iconfont --save
+> npm install @xpmn/iconfont --save
 
 ### 引入组件
 
@@ -20,7 +20,7 @@
 
 <script>
 import wepy from 'wepy'
-import iconfont from '@mnui/iconfont'
+import iconfont from '@xpmn/iconfont'
 
 export default class Index extends wepy.page {
   components = {

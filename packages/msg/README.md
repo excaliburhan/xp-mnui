@@ -8,7 +8,7 @@
 
 ### 安装组件
 
-> npm install @mnui/msg --save
+> npm install @xpmn/msg --save
 
 ### 引入组件
 
@@ -20,7 +20,7 @@
 
 <script>
 import wepy from 'wepy'
-import msg from '@mnui/msg'
+import msg from '@xpmn/msg'
 
 export default class Index extends wepy.page {
   components = {

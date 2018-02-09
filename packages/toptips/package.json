@@ -1,6 +1,6 @@
 {
-  "name": "@mnui/toptips",
-  "version": "1.0.1",
+  "name": "@xpmn/toptips",
+  "version": "1.0.2",
   "description": "Toptips 顶部提示",
   "main": "index.wpy",
   "author": "xiaoping",

@@ -8,7 +8,7 @@
 
 ### 安装组件
 
-> npm install @mnui/btn --save
+> npm install @xpmn/btn --save
 
 ### 引入组件
 
@@ -20,7 +20,7 @@
 
 <script>
 import wepy from 'wepy'
-import btn from '@mnui/btn'
+import btn from '@xpmn/btn'
 
 export default class Index extends wepy.page {
   components = {

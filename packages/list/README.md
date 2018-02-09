@@ -8,7 +8,7 @@
 
 ### 安装组件
 
-> npm install @mnui/list --save
+> npm install @xpmn/list --save
 
 ### 引入组件
 
@@ -20,7 +20,7 @@
 
 <script>
 import wepy from 'wepy'
-import list from '@mnui/list'
+import list from '@xpmn/list'
 
 export default class Index extends wepy.page {
   components = {
