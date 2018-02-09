@@ -8,7 +8,7 @@
 
 ### 安装组件
 
-> npm install xp-mnui-toast --save
+> npm install @mnui/toast --save
 
 ### 引入组件
 
@@ -20,7 +20,7 @@
 
 <script>
 import wepy from 'wepy'
-import toast from 'xp-mnui-toast'
+import toast from '@mnui/toast'
 
 export default class Index extends wepy.page {
   components = {

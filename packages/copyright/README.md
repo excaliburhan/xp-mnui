@@ -8,7 +8,7 @@
 
 ### 安装组件
 
-> npm install xp-mnui-copyright --save
+> npm install @mnui/copyright --save
 
 ### 引入组件
 
@@ -20,7 +20,7 @@
 
 <script>
 import wepy from 'wepy'
-import copyright from 'xp-mnui-copyright'
+import copyright from '@mnui/copyright'
 
 export default class Index extends wepy.page {
   components = {

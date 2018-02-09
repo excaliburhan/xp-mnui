@@ -1,9 +1,8 @@
 <template>
-<view class="mnui-copyright">
-  <image class="mnui-copyright__img" wx:if="{{logo}}" src="{{logo}}"
-    style="{{calcLogo}}"></image>
-  <text class="mnui-copyright__text" style="{{calcText}}">{{text}}</text>
-</view>
+  <view class="mnui-copyright">
+    <image class="mnui-copyright__img" wx:if="{{logo}}" src="{{logo}}" style="{{calcLogo}}"></image>
+    <text class="mnui-copyright__text" style="{{calcText}}">{{text}}</text>
+  </view>
 </template>
 
 <script>
@@ -21,7 +20,8 @@ export default class Copyright extends wepy.component {
     },
     logo: {
       type: String,
-      default: 'http://startdtadmin.oss-cn-hangzhou.aliyuncs.com/startgo/mnui/copyright-logo.png',
+      default:
+        'http://startdtadmin.oss-cn-hangzhou.aliyuncs.com/aishop/mnui/copyright-logo.png',
     },
     logoStyle: {
       type: Object,
@@ -29,15 +29,15 @@ export default class Copyright extends wepy.component {
     },
   }
   computed = {
-    calcText () {
+    calcText() {
       return this.calcStyle(this.textStyle)
     },
-    calcLogo () {
+    calcLogo() {
       return this.calcStyle(this.logoStyle)
     },
   }
 
-  calcStyle (style) {
+  calcStyle(style) {
     let ret = ''
     for (let key in style) {
       ret += `${key}:${style[key]};`

@@ -1,10 +1,7 @@
 <template>
-<button class="mnui-btn mnui-btn-{{type}}" :class="{'mnui-btn-disabled': disabled}" type="{{type}}"
-  size="{{size}}" loading="{{loading}}" disabled="{{disabled}}" hover-class="{{hoverClass}}"
-  style="{{combineStyle}}" @tap="onTap"
->
-  <slot></slot>
-</button>
+  <button class="mnui-btn mnui-btn-{{type}}" :class="{'mnui-btn-disabled': disabled}" type="{{type}}" size="{{size}}" loading="{{loading}}" disabled="{{disabled}}" hover-class="{{hoverClass}}" style="{{combineStyle}}" @tap="onTap">
+    <slot></slot>
+  </button>
 </template>
 
 
@@ -39,18 +36,18 @@ export default class Btn extends wepy.component {
     },
   }
   computed = {
-    combineStyle () {
+    combineStyle() {
       return this.calcStyle(this.style)
     },
   }
 
   methods = {
-    onTap (e) {
+    onTap(e) {
       this.$emit('tap', e)
     },
   }
 
-  calcStyle (style) {
+  calcStyle(style) {
     let ret = ''
     for (let key in style) {
       ret += `${key}:${style[key]};`
@@ -73,12 +70,12 @@ export default class Btn extends wepy.component {
 }
 .mnui-btn-default {
   color: #fff;
-  background: #19CADA;
+  background: #19cada;
 }
 .mnui-btn-plain {
-  color: #19CADA;
+  color: #19cada;
   background: transparent;
-  border: 2rpx solid #19CADA;
+  border: 2rpx solid #19cada;
 }
 .mnui-btn-small {
   width: 300rpx;
@@ -94,7 +91,7 @@ export default class Btn extends wepy.component {
 }
 .mnui-btn-disabled {
   color: rgba(0, 0, 0, 0.3) !important;
-  background-color: #F7F7F7 !important;
+  background-color: #f7f7f7 !important;
 }
 .mnui-btn-disabled.mnui-btn-plain {
   color: rgba(0, 0, 0, 0.2) !important;

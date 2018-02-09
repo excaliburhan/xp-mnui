@@ -8,7 +8,7 @@
 
 ### 安装组件
 
-> npm install xp-mnui-toptips --save
+> npm install @mnui/toptips --save
 
 ### 引入组件
 
@@ -20,7 +20,7 @@
 
 <script>
 import wepy from 'wepy'
-import toptips from 'xp-mnui-toptips'
+import toptips from '@mnui/toptips'
 
 export default class Index extends wepy.page {
   components = {

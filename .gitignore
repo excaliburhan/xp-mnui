@@ -1,6 +1,18 @@
+.DS_Store
 node_modules
 dist
-*.log
-.vscode
+
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+*.log*
+
+# Editor directories and files
 .idea
-.DS_store
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln

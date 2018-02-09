@@ -1,0 +1,93 @@
+<template>
+  <view class="mnui-listItem">
+    <navigator wx:if="{{link}}" url="{{link}}">
+      <view class="mnui-listItem__wrap">
+        <image class="mnui-listItem__icon" wx:if="{{icon}}" src="{{icon}}"></image>
+        <text class="mnui-listItem__title" wx:if="{{title}}">{{title}}</text>
+        <text class="mnui-listItem__desc" wx:if="{{desc}}">{{desc}}</text>
+        <view class="mnui-listItem__arrow" wx:if="{{link}}"></view>
+      </view>
+    </navigator>
+    <view wx:else class="mnui-listItem__wrap" @tap="onTap">
+      <image class="mnui-listItem__icon" wx:if="{{icon}}" src="{{icon}}"></image>
+      <text class="mnui-listItem__title" wx:if="{{title}}">{{title}}</text>
+      <text class="mnui-listItem__desc" wx:if="{{desc}}">{{desc}}</text>
+      <view class="mnui-listItem__arrow" wx:if="{{link || arrow}}"></view>
+    </view>
+  </view>
+</template>
+
+<script>
+import wepy from 'wepy'
+
+export default class ListItem extends wepy.component {
+  props = {
+    icon: {
+      type: String,
+      default: '',
+    },
+    title: {
+      type: String,
+      default: '',
+    },
+    link: {
+      type: String,
+      default: '',
+    },
+    desc: {
+      type: String,
+      default: '',
+    },
+    arrow: {
+      type: Boolean,
+      default: false,
+    },
+  }
+
+  methods = {
+    onTap(e) {
+      this.$emit('tap', e)
+    },
+  }
+}
+</script>
+
+<style>
+.mnui-listItem {
+  box-sizing: border-box;
+  width: calc(100% - 32rpx);
+  margin-left: 32rpx;
+  padding-right: 32rpx;
+}
+.mnui-listItem navigator {
+  width: 100%;
+}
+.mnui-listItem__wrap {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 92rpx;
+}
+.mnui-listItem__icon {
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 16rpx;
+}
+.mnui-listItem__title {
+  flex: 1;
+  color: #333;
+}
+.mnui-listItem__desc {
+  min-width: 112rpx;
+  text-align: right;
+  color: #333;
+}
+.mnui-listItem__arrow {
+  width: 15rpx;
+  height: 15rpx;
+  border-top: 3rpx solid #666;
+  border-right: 3rpx solid #666;
+  transform: rotate(45deg);
+}
+</style>

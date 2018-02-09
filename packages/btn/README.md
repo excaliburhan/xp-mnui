@@ -8,7 +8,7 @@
 
 ### 安装组件
 
-> npm install xp-mnui-btn --save
+> npm install @mnui/btn --save
 
 ### 引入组件
 
@@ -20,7 +20,7 @@
 
 <script>
 import wepy from 'wepy'
-import btn from 'xp-mnui-btn'
+import btn from '@mnui/btn'
 
 export default class Index extends wepy.page {
   components = {
@@ -55,3 +55,9 @@ export default class Index extends wepy.page {
 ### style[Object]
 
 自定义样式，对象格式
+
+## event事件
+
+### tap
+
+点击事件

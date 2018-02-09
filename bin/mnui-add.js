@@ -14,8 +14,8 @@ program
   .on('--help', () => {
     utils.log('  > 使用方法:')
     utils.log('    # 安装toptips组件（默认使用yarn安装依赖，yarn不存在则使用npm）', 'gray')
-    console.log('    $ mnui add xp-mnui-toptips')
-    utils.log('    # 组件名可以指定版本号，xp-mnui组件可以省略前缀', 'gray')
+    console.log('    $ mnui add @mnui/toptips')
+    utils.log('    # 组件名可以指定版本号，@mnui组件可以省略前缀', 'gray')
     console.log('    $ mnui add toptips@1.0.0')
     utils.log('    # 更换依赖管理工具（使用npm安装依赖）', 'gray')
     console.log('    $ mnui add toptips npm')
@@ -33,8 +33,8 @@ function run () {
   let pkgName = args[0]
   let installer = args[1]
   let prefixArr = ['copyright', 'iconfont', 'toptips'] // 省略前缀的数组
-  if (prefixArr.includes(pkgName) && pkgName.indexOf('xp-mnui') === -1) {
-    pkgName = 'xp-mnui-' + pkgName
+  if (prefixArr.includes(pkgName) && pkgName.indexOf('@mnui') === -1) {
+    pkgName = '@mnui/' + pkgName
   }
   if (!installer) {
     installDep(pkgName, 'yarn')

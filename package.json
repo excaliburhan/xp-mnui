@@ -1,6 +1,6 @@
 {
   "name": "xp-mnui",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "基于wepy的微信小程序UI组件库，wepy组件解决方案",
   "main": "index.js",
   "repository": "git@github.com:excaliburhan/xp-mnui.git",
@@ -15,5 +15,8 @@
     "chalk": "^2.3.0",
     "commander": "^2.11.0",
     "glob": "^7.1.2"
+  },
+  "devDependencies": {
+    "lerna": "^2.8.0"
   }
 }
