@@ -1,0 +1,25 @@
+<template>
+  <view class="mnui-list">
+    <slot></slot>
+  </view>
+</template>
+
+<script>
+import wepy from 'wepy'
+
+export default class List extends wepy.component {}
+</script>
+
+<style>
+.mnui-list {
+  margin-top: 20rpx;
+  width: 100%;
+  background: #fff;
+}
+.mnui-listItem {
+  border-top: 1rpx solid rgba(0, 0, 0, 0.1);
+}
+.mnui-listItem:first-child {
+  border: none;
+}
+</style>
